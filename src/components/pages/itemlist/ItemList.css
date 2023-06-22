@@ -1,0 +1,37 @@
+.itemlist {
+  margin: 1rem;
+  padding: 3rem;
+}
+
+.encabezado {
+  font-weight: 800;
+  font-size: 18px;
+  margin-bottom: 2rem;
+}
+
+.itemlist li {
+  list-style: none;
+}
+
+.itemlist ul {
+  justify-content: space-between;
+  display: flex;
+}
+
+.btn-categoria {
+  position: relative;
+  border: 0;
+  outline: 0;
+  padding: 10px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  text-transform: uppercase;
+  background: #e3e6f3;
+  font-weight: 800;
+}
+
+.btn-categoria:hover {
+  background: #7c063f;
+  transition: 0.5s;
+  color: #e3e6f3;
+}
