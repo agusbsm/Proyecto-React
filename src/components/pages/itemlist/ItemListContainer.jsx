@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom";
 const ItemlistContainer = () => {
   const [items, setItems] = useState([]);
 
-  const { categoryName } = useParams;
+  const { categoryName } = useParams();
 
   useEffect(() => {
     let productosFiltrados = productos.filter(
@@ -15,7 +15,7 @@ const ItemlistContainer = () => {
 
     const tarea = new Promise((resolve, reject) => {
       resolve(categoryName ? productosFiltrados : productos);
-    }, 3000);
+    });
 
     tarea.then((respuesta) => setItems(respuesta));
   }, [categoryName]);

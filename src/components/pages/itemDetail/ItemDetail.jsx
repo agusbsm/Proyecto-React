@@ -1,12 +1,14 @@
+import { Card, CardActionArea, CardMedia } from "@mui/material";
 import CounterContainer from "../../common/itemCounter/CounterContainer";
 
-const ItemDetail = (producto) => {
+const ItemDetail = ({ producto }) => {
   return (
-    <div>
+    <Card sx={{ maxWidth: 600 }}>
       <h1>{producto.titulo}</h1>
-      <h3>{producto.precio}</h3>
+      <CardMedia component="img" height="500" image={producto.image} />
+      <h3>${producto.precio}</h3>
       <CounterContainer stock={producto.stock} />
-    </div>
+    </Card>
   );
 };
 export default ItemDetail;

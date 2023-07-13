@@ -12,7 +12,9 @@ const ItemCard = ({ item }) => {
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardActionArea>
-        <CardMedia component="img" height="180" image={item.image} />
+        <Link to={`/ItemDetail/${item.id}`}>
+          <CardMedia component="img" height="180" image={item.image} />
+        </Link>
         <CardContent>
           <Typography gutterBottom variant="h4" fontSize={18} component="div">
             {item.titulo}
@@ -21,7 +23,9 @@ const ItemCard = ({ item }) => {
             ${item.precio}
           </Typography>
           <Link to={`/ItemDetail/${item.id}`}>
-            <Button variant="contained">Ver Producto</Button>
+            <Button style={{ backgroundColor: "#7c063f" }} variant="contained">
+              Ver Producto
+            </Button>
           </Link>
         </CardContent>
       </CardActionArea>

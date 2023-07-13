@@ -7,16 +7,15 @@ import CartContainer from "./components/pages/cart/CartContainer";
 function App() {
   return (
     <BrowserRouter>
+      <Navbar />
       <Routes>
-        <Route element={<Navbar />}>
-          <Route path="/" element={<ItemlistContainer />} />
-          <Route path="/itemDetail/:id" element={<ItemDetailContainer />} />
-          <Route
-            path="/categoria/:categoryName"
-            element={<ItemlistContainer />}
-          />
-          <Route path="/cart" element={<CartContainer />} />
-        </Route>
+        <Route path="/" element={<ItemlistContainer />} />
+        <Route path="/ItemDetail/:id" element={<ItemDetailContainer />} />
+        <Route
+          path="/categoria/:categoryName"
+          element={<ItemlistContainer />}
+        />
+        <Route path="/cart" element={<CartContainer />} />
         <Route path="*" element={<h1>404 NOT FOUND</h1>} />
       </Routes>
     </BrowserRouter>
