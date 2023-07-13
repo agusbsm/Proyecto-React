@@ -1,29 +1,28 @@
 import {
+  Button,
   Card,
   CardActionArea,
   CardContent,
   CardMedia,
   Typography,
 } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const ItemCard = ({ item }) => {
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardActionArea>
-        <CardMedia
-          component="img"
-          height="140"
-          image="/static/images/cards/contemplative-reptile.jpg"
-          alt="green iguana"
-        />
+        <CardMedia component="img" height="180" image={item.image} />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            Lizard
+          <Typography gutterBottom variant="h4" fontSize={18} component="div">
+            {item.titulo}
           </Typography>
-          <Typography variant="body2" color="text.secondary">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
+          <Typography variant="body2" color="text.primary">
+            ${item.precio}
           </Typography>
+          <Link to={`/ItemDetail/${item.id}`}>
+            <Button variant="contained">Ver Producto</Button>
+          </Link>
         </CardContent>
       </CardActionArea>
     </Card>

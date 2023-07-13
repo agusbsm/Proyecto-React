@@ -5,7 +5,6 @@
 
 .encabezado {
   font-weight: 800;
-  font-size: 18px;
   margin-bottom: 2rem;
 }
 
@@ -14,7 +13,7 @@
 }
 
 .itemlist ul {
-  justify-content: space-between;
+  justify-content: space-around;
   display: flex;
 }
 
@@ -22,6 +21,7 @@
   position: relative;
   border: 0;
   outline: 0;
+  border-radius: 3px;
   padding: 10px 15px;
   font-size: 14px;
   cursor: pointer;
@@ -34,4 +34,13 @@
   background: #7c063f;
   transition: 0.5s;
   color: #e3e6f3;
+}
+
+.itemcards {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 50px;
 }
