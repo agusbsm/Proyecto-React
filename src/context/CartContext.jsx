@@ -27,13 +27,16 @@ const CartContextComponent = ({ children }) => {
         }
       });
 
+      localStorage.setItem("cart", JSON.stringify(nuevoArray));
       setCart(nuevoArray);
     } else {
+      localStorage.setItem("cart", JSON.stringify([...cart, producto]));
       setCart([...cart, producto]);
     }
   };
 
   const clearCart = () => {
+    localStorage.removeItem("cart");
     setCart([]);
   };
 
@@ -43,6 +46,7 @@ const CartContextComponent = ({ children }) => {
 
   const deleteById = (id) => {
     let nuevoArray = cart.filter((elemento) => elemento.id !== id);
+    localStorage.setItem("cart", JSON.stringify(nuevoArray));
     setCart(nuevoArray);
   };
 

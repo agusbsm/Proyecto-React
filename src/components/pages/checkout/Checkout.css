@@ -1,0 +1,20 @@
+form {
+  margin: auto;
+  max-width: 600px;
+  padding: 4.5em 3em;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 60%);
+  color: black;
+  text-align: center;
+}
+
+input {
+  position: relative;
+  width: 100%;
+  background: none;
+  font-size: 1rem;
+  padding: 0.6em 0.3em;
+  border: none;
+  outline: none;
+}

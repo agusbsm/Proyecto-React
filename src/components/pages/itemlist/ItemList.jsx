@@ -34,10 +34,10 @@ const ItemList = ({ items }) => {
                 <Skeleton variant="rounded" width={150} height={160} />
                 <Skeleton
                   variant="text"
-                  width={180}
+                  width={150}
                   sx={{ fontSize: "1rem" }}
                 />
-                <Skeleton variant="rounded" width={150} height={40} />
+                <Skeleton variant="rounded" width={150} height={80} />
               </Stack>
             ))}
       </section>

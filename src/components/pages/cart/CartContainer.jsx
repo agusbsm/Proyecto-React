@@ -5,6 +5,7 @@ import IconButton from "@mui/material/IconButton";
 import Button from "@mui/material/Button";
 import "./CartContainer.css";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 const CartContainer = () => {
   const { cart, deleteById, totalPrice, clearCart } = useContext(CartContext);
@@ -79,24 +80,45 @@ const CartContainer = () => {
           </tbody>
         );
       })}
-      {cart.lenght > 0 && (
+
+      {cart.length > 0 && (
         <>
-          <Button
-            className="cart-clear"
-            style={{ backgroundColor: "#7c063f", margin: "170px" }}
-            variant="contained"
-            onClick={vaciar}
-          >
-            Vaciar Carrito
-          </Button>
-          <Link to="/checkout">Finalizar Compra</Link>
+          <tfoot>
+            <tr>
+              <td>
+                <Button
+                  style={{
+                    backgroundColor: "#7c063f",
+                    color: "#e3e6f3",
+                    margin: "20px",
+                  }}
+                  variant="contained"
+                  onClick={vaciar}
+                >
+                  vaciar carrito
+                </Button>
+                <Link
+                  style={{
+                    textDecoration: "none",
+                    backgroundColor: " #7c063f",
+                    color: "#e3e6f3",
+                    padding: "8px",
+                    borderRadius: "5px",
+                  }}
+                  to="/checkout"
+                >
+                  TERMINAR COMPRA
+                </Link>
+              </td>
+            </tr>
+          </tfoot>
+          <tfoot>
+            <tr>
+              <td>Total:${total}</td>
+            </tr>
+          </tfoot>
         </>
       )}
-      <tfoot>
-        <tr>
-          <td>Total:${total}</td>
-        </tr>
-      </tfoot>
     </table>
   );
 };
