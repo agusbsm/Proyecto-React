@@ -1,4 +1,4 @@
-import "./Itemlist.css";
+import "./itemlist.css";
 import ItemCard from "../../common/itemCard/ItemCard";
 import { Link } from "react-router-dom";
 import { Skeleton, Stack } from "@mui/material";

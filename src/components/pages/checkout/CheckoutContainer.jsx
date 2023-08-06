@@ -10,7 +10,7 @@ import {
   doc,
 } from "firebase/firestore";
 import { CartContext } from "../../../context/CartContext";
-import "./Checkout.css";
+import "./checkout.css";
 import { Link } from "react-router-dom";
 
 const CheckoutContainer = () => {

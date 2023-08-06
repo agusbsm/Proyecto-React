@@ -3,7 +3,7 @@ import { CartContext } from "../../../context/CartContext";
 import HighlightOffIcon from "@mui/icons-material/HighlightOff";
 import IconButton from "@mui/material/IconButton";
 import Button from "@mui/material/Button";
-import "./CartContainer.css";
+import "./cartcontainer.css";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
 
