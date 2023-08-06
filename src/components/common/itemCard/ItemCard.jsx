@@ -19,13 +19,25 @@ const ItemCard = ({ item }) => {
           <Typography gutterBottom variant="h4" fontSize={18} component="div">
             {item.titulo}
           </Typography>
-          <Typography variant="body2" color="text.primary">
+          <Typography
+            style={{ marginBottom: "10px" }}
+            variant="body2"
+            color="text.primary"
+          >
             ${item.precio}
           </Typography>
-          <Link to={`/ItemDetail/${item.id}`}>
-            <Button style={{ backgroundColor: "#7c063f" }} variant="contained">
-              Ver Producto
-            </Button>
+          <Link
+            to={`/ItemDetail/${item.id}`}
+            style={{
+              textDecoration: "none",
+              backgroundColor: " #7c063f",
+              color: "#e3e6f3",
+              padding: "4px",
+              borderRadius: "3px",
+              fontWeight: "bold",
+            }}
+          >
+            Ver Producto
           </Link>
         </CardContent>
       </CardActionArea>

@@ -5,7 +5,12 @@ import Button from "@mui/material/Button";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 
-export default function BasicButtons({ counter, setCounter, stock }) {
+export default function BasicButtons({
+  counter,
+  setCounter,
+  stock,
+  agregarAlCarrito,
+}) {
   return (
     <Stack spacing={10} direction="row">
       <IconButton
@@ -23,7 +28,11 @@ export default function BasicButtons({ counter, setCounter, stock }) {
       >
         <AddIcon />
       </IconButton>
-      <Button style={{ backgroundColor: "#7c063f" }} variant="contained">
+      <Button
+        onClick={() => agregarAlCarrito(counter)}
+        style={{ backgroundColor: "#7c063f" }}
+        variant="contained"
+      >
         Agregar al Carrito
       </Button>
     </Stack>

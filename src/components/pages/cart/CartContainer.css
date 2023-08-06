@@ -1,0 +1,44 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  white-space: nowrap;
+  font-weight: bold;
+  margin-top: 40px;
+}
+
+table thead {
+  border: 1px solid #e3e6f3;
+  border-left: none;
+  border-right: none;
+}
+
+.cart-details {
+  font-size: 14px;
+}
+
+table td:nth-child(1) {
+  width: 100px;
+  text-align: center;
+}
+
+table td:nth-child(2) {
+  width: 150px;
+  text-align: center;
+}
+
+table td:nth-child(3) {
+  width: 250px;
+  text-align: center;
+}
+
+table td:nth-child(4),
+table td:nth-child(5),
+table td:nth-child(6) {
+  width: 150px;
+  text-align: center;
+}
+
+table td:nth-child(7) {
+  text-align: center;
+}

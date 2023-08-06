@@ -1,7 +1,7 @@
 export const productos = [
   {
     id: 1,
-    titulo: "Campera",
+    titulo: "Campera Azul",
     image:
       "https://res.cloudinary.com/dfbi60hsc/image/upload/v1688682233/prenda_01_j6ev3f.jpg",
     precio: 23000,
@@ -10,7 +10,7 @@ export const productos = [
   },
   {
     id: 2,
-    titulo: "Camiseta",
+    titulo: "Camiseta Negra",
     image:
       "https://res.cloudinary.com/dfbi60hsc/image/upload/v1688844055/prenda_02_ltn2uc.jpg",
     precio: 18000,
